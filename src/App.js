@@ -1,6 +1,15 @@
+import NavBar from "./Components/NavBar/NavBar"
+
 function App() {
+
+  //Array of links used for nagivation bar
+  const links = ["start", "about"];
+
+
   return (
-      <h1>TEST</h1>
+      <>
+        <NavBar links={links}/>
+      </>
   );
 }
 
