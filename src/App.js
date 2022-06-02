@@ -1,31 +1,24 @@
-import NavBar from "./Components/NavBar/NavBar"
-import Header from "./Components/Header/Header"
-import Button from "./Components/Button/Button"
-import Explanation from "./Components/Explanation/Explanation"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Layout from "./Pages/Layout"
+import Home from "./Pages/Home"
+import Start from "./Pages/Start"
+import About from "./Pages/About"
+
+import NoPage from "./Pages/NoPage"
 
 function App() {
-
-  //Array of links used for nagivation bar
-  const links = ["start", "about"]
-
-  //String used in subheading
-  const subheading = "Simply press Start and choose the base of your drink!"
-
-  
-  const explanation = ["We look for recipe that contains your selected ingredients,",
-                       "Then, we display few propistions, so you can pick which exatcly one you would like to drink."]
-
-
   return (
-      <>
-        <NavBar links={links}/>
-
-        <Header subheading={subheading} />
-
-        <Button styles="start" value="Start" />
-
-        <Explanation explanation={explanation} />
-      </>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="start" element={<Start />} />
+            <Route path="about" element={<About />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
   );
 }
 
