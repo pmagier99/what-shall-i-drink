@@ -1,0 +1,7 @@
+{
+  "short_name": "WSID",
+  "name": "What Shall I Drink",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#eee"
+}
