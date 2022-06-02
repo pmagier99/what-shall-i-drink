@@ -8,7 +8,7 @@ const Home = () => {
 
 
   //String used in subheading
-  const subheading = "Simply press Start and choose the base of your drink!"
+  const subheading = "Simply press Start and type what ingredients you have!"
 
   //Array of strings that explain how the website works.
   const explanation = ["We look for recipe that contains your selected ingredients,",
