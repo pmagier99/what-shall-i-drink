@@ -1,5 +1,6 @@
 import NavBar from "./Components/NavBar/NavBar"
 import Header from "./Components/Header/Header"
+import Button from "./Components/Button/Button"
 
 function App() {
 
@@ -15,6 +16,8 @@ function App() {
         <NavBar links={links}/>
 
         <Header subheading={subheading} />
+
+        <Button styles="start" value="Start" />
       </>
   );
 }
