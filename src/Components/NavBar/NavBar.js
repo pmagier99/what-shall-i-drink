@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
+import {Link} from "react-router-dom";
 
 const StyledNav = styled.nav`
     padding: 2vw 5vw;
@@ -26,10 +27,12 @@ const StyledLinks = styled.ul`
 const NavBar = ({links}) => {
   return (
     <StyledNav>
-        <Logo />
+        <Link to="/" style={{marginRight: "auto"}}> <Logo /> </Link>
         <StyledLinks>
             {links.map((element, index) => 
-              <li key={index}>{element}</li>
+              <Link to={element}>
+                <li key={index}>{element}</li>
+              </Link>
             )}
         </StyledLinks>
        
