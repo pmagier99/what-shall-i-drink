@@ -11,8 +11,8 @@ const Home = () => {
   const subheading = "Simply press Start and type what ingredients you have!"
 
   //Array of strings that explain how the website works.
-  const explanation = ["We look for recipe that contains your selected ingredients,",
-                       "Then, we display few propistions, so you can pick which exatcly one you would like to drink."]
+  const explanation = ["We look for recipes that contain your selected ingredients,",
+                       "Then, we display few propositions, so you can pick which exactly one you would like to try."]
 
   return (
     <>
