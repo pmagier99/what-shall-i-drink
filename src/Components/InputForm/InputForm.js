@@ -15,8 +15,7 @@ const StyledForm = styled.form`
 const InputForm = () => {
   return (
     <StyledForm>
-      <InputField placeholder={"Type alcohol..."} list={"alcohol"} />
-      <InputField placeholder={"Type any other ingredients..."}/>
+      <InputField placeholder={"Type any ingredients you have..."} list={"alcohol"}/>
       <AddButton/>
     </StyledForm>
   )
