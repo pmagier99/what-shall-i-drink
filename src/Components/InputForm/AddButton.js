@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import {FaPlus} from 'react-icons/fa'
+
+import {Context} from '../../Pages/Start.js'
 
 const StyledAddButton = styled.div`
     height: 66px; width: 66px;
@@ -16,8 +18,11 @@ const StyledAddButton = styled.div`
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `
 const AddButton = () => {
+
+  const func = useContext(Context);
+
   return (
-    <StyledAddButton>
+    <StyledAddButton onClick={func}>
         <FaPlus/>
     </StyledAddButton>
   )
