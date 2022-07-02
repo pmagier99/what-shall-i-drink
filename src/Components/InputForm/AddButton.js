@@ -22,7 +22,7 @@ const AddButton = () => {
   const func = useContext(Context);
 
   return (
-    <StyledAddButton onClick={func}>
+    <StyledAddButton onClick={func.onClick}>
         <FaPlus/>
     </StyledAddButton>
   )
