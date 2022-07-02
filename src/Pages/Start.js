@@ -20,17 +20,31 @@ const Start = () => {
     setIngredientsList(ingredientsList => [...ingredientsList, document.querySelector("input").value]);
   }
 
+  //Function for removeing an ingredient
+  const removeIngredient = (index) => {
+    setIngredientsList(ingredientsList.filter(ingredient => ingredientsList.indexOf(ingredient) !== index ))
+  }
+
+  //Object with function used with Context to pass them to other components
+  const data = {
+    onClick: onClick,
+    removeIngredient: removeIngredient
+  }
+
+
   return (
     <>
-      <Header subheading={subheading} />
+      <Context.Provider value={data}>
 
-      <Context.Provider value={onClick}>  
-        <InputForm onClick={onClick}/>
+        <Header subheading={subheading} />
+        
+        <InputForm/>
+
+        <Button value="Search"/>
+
+        {ingredientsList.length > 0 ? <Ingredients list={ingredientsList}/> : <p>No ingredients added yet!</p>}
+
       </Context.Provider>
-
-      <Button value="Search"/>
-
-      {ingredientsList.length > 0 ? <Ingredients list={ingredientsList}/> : <p>No ingredients added yet!</p>}
     </>
   )
 }
